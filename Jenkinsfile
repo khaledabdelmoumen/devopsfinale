@@ -37,12 +37,12 @@ pipeline {
                          }
                  }
        
-                 stage('MVN SONARQUBE')
+             /*    stage('MVN SONARQUBE')
                  {
                  steps{
                           sh 'mvn sonar:sonar -Dsonar.login=admin -Dsonar.password=21091520a -Ptest'
                       }
-                 }
+                 }*/
           stage('MOK Test ') {
                    steps {
                         sh 'mvn clean test -Dtest=com.esprit.examen.services.ProduitServiceImplMocktest -Ptest'
